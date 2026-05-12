@@ -1147,8 +1147,8 @@ function sendNotification(title, body, options = {}) {
     navigator.serviceWorker.ready
       .then((registration) => registration.showNotification(title, {
         body,
-        icon: "icon.svg",
-        badge: "icon.svg",
+        icon: "/assets/awrc-logo.png",
+        badge: "/assets/awrc-logo.png",
         tag: options.tag || title,
         requireInteraction: Boolean(options.requireInteraction)
       }))
@@ -1161,7 +1161,7 @@ function sendNotification(title, body, options = {}) {
 function showWindowNotification(title, body, options = {}) {
   new Notification(title, {
     body,
-    icon: "icon.svg",
+    icon: "/assets/awrc-logo.png",
     tag: options.tag || title,
     requireInteraction: Boolean(options.requireInteraction)
   });
